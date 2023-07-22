@@ -1,4 +1,5 @@
 // get api
+// var temp = document.getElementbyId("currentWeatherCard")
 
 function getApi(query){
     // Save API in a variable RequestURL
@@ -7,30 +8,37 @@ function getApi(query){
     fetch(requestUrl)
     // // once fetched
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => appendWeather(data));
 
     //     return response.json();
        
     }
     getApi()
+ 
 
-    // .then(function(data) {
-    //     console.log(data)
-    //     // dataContainer in HTML
-    //     for (var i = 0; i < data.length; i++){
-    //         link.textContent = data[i].html_url;
-    //         link.href = data[i].html_url;
+function appendWeather(weather){
+    console.log(weather);
+ 
+    var currentWeather = document.querySelector("#currentWeatherCard");
 
-    //         createTableRow.appendChild(tableData);
-    
-    //     }
-    // })
+    var city = document.createElement("h1");
+    city.textContent= weather.name;
+    currentWeather.append(city);
 
-console.log(requestUrl)
-// appendWeather(data){
-//     dataContainer.append()
+    var temp = document.createElement("p");
+    temp.textContent= weather.main.temp;
+    currentWeather.append(temp);
 
-    
-// }
+    var wind = document.createElement("p");
+    wind.textContent= weather.wind.speed;
+    currentWeather.append(wind);
 
+    var humidity = document.createElement("p");
+    humidity.textContent= weather.main.humidity;
+    currentWeather.append(humidity);
+//     // create p for temp,, wind, humidity
+details.append("")
+}
+appendWeather()
+temp.append(city);
 // fetchDataBtn.addEventListener("click", getAPI);
