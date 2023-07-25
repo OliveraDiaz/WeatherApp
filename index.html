@@ -1,32 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 day forecast</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css"></head>
+ 
 </head>
 <body>
     <header class="bg-gradient-to-r from-blue-900 via-blue-500 to-blue-100">
         <h1 class="text-white text-xl font-bold text-center p-5">Weather Dashboard</h1>
     </header>
-    <aside>
-        <label for ="city"></label>
-        <input name="countryname" placeholder=" Enter a City" id="city" type="text" class="border rounded m-5"/>
-        <button id=fetchDataBtn class="bg-blue-900 p-2 rounded font-bold text-white">Search</button>
+    <aside class="flex ">
+
+        <form id="form" method="GET">
+            <label for ="city"></label>
+            <input name="city" placeholder=" Enter a City" id="city" type="text " required class="border rounded m-5"/>
+           
+            <button id="button" class= "bg-blue-900 fetchDataBtn p-2 rounded font-bold text-white button">Search</button>
+        </form>
         <div class="searchHistory"> </div>
     </aside>
-    <main>
-        <div id="currentWeatherCard">
-        
+    <main class="main">
+        <div class="flex">
+            <div id="currentWeatherCityCard" class="flex flex-col border-gray-900 ml-96 main "></div>
+            <div id="currentWeatherDetailsEl" class="flex test main "></div>
             <!-- <p id="UV"></p> -->
+        
+
+
         </div>
 
-        <div id=dataContainer class="forecast">
-            <h3 class="text-3xl font-bold underline"> 5-Day Forecast:</h3>
-<!-- 5day forecast -->
+        <div id="dataContainer" class="flex">
+            <h3 class="text-3xl font-bold underline ml-96 mt-10"> 5-Day Forecast:</h3>
+                <div id="5 day ">
+
+                </div>
         </div>
     </main>
+
     <script src="script.js"></script>
 </body>
+
 </html>
