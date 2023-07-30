@@ -1,19 +1,35 @@
-
 function getApi() {
-var latitude = "45.523064";
-var longitude = "-122.676483";   
-var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=` + latitude + `&lon=` + longitude + `&units=imperial&appid=0edeb8b579e8e284e65b6f8bcc481965`; 
-console.log(requestUrl);
-
-// fetch API data
-fetch(requestUrl)
-.then((response) => response.json())
-.then((data) => appendWeather(data));
-
-}
-
+    var city = document.getElementById('city').value;
+    var geoCodeUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0edeb8b579e8e284e65b6f8bcc481965`;
+  
+    fetch(geoCodeUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.cod === "404") {
+          throw new Error("City not found");
+        }
+        var latitude = data.coord.lat;
+        var longitude = data.coord.lon;
+        var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=0edeb8b579e8e284e65b6f8bcc481965`;
+        return fetch(requestUrl);
+      })
+      .then((response) => response.json())
+      .then((data) => appendWeather(data))
+      .catch((error) => {
+        console.error('Error fetching data', error);
+      });
+  }
+  
+  document.querySelector(".fetchDataBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    getApi();
+  });
+  
+  
 document.querySelector(".fetchDataBtn").addEventListener("click", function (event) {
     event.preventDefault();
+    
+    console.log(city);
     getApi();
 });
 
