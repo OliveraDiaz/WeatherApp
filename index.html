@@ -20,16 +20,20 @@
     <aside class="test">
         <form id="form" method="GET">
             <label for ="city"></label>
-            <input name="city" placeholder=" Enter a City" id="city" type="text reset" required class="border rounded m-5"/>
+            <input name="city" placeholder=" Enter a City" id="city" type="text reset" required class="border rounded m-5 input"/>
             <button id="button" class= "bg-blue-900 fetchDataBtn p-2 rounded font-bold text-white button">Search</button>
+
+            <div class="history"></div>
         </form>
     </aside>
 
     <main class="main">
      
         <div class="current">
-            <p class="date text-black text-3xl m-2"></p>
+            <img id="mainIcon" alt="main icon">
             <p class="city text-black text-3xl m-2"> </p>
+            <p class="date text-black text-2xl m-2"></p>
+          
               <div class="flex">  
                 <p class="temp text-black text-2xl m-2"> </p>
                 <p class="wind text-black text-2xl m-2"></p>
@@ -37,38 +41,33 @@
             </div>
         </div>
 
-
-
-
-
-
         <div >
             <h2 class="text-3xl font-bold underline ml-96 mt-10"> 5-Day Forecast:</h2> 
 
             <div class="dayForcast">
                 <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <!-- Here is where my icon is not rendering... -->
+                    <img id="icon1" alt="weather icon">
                     <div class="cardForcast  daily content-center" id="5 day "> </div>
                 </div> 
-                
-                
+            
                 <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <img id="icon2" alt="weather icon">
                     <div class="cardForcast1  daily content-center" id="5 day "> </div>
                 </div> 
 
                 <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <img id="icon3" alt="weather icon">
                     <div class="cardForcast2  daily content-center" id="5 day "> </div>
                 </div> 
                 
                 <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <img id="icon4" alt="weather icon">
                     <div class="cardForcast3  daily content-center" id="5 day "> </div>
                 </div> 
 
                 <div class="flex">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <img  id="icon5" alt="weather icon">
                     <div class="cardForcast4  daily content-center" id="5 day "> </div>
                 </div> 
             </div>    

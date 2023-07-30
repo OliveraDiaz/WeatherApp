@@ -2,11 +2,12 @@
 .daily{
     height: 100px;
     width: 600px;
-    background-color: aqua;
+    background: rgba(72,132,234,1);
     margin: 10px;
     padding-left: 50px;
     font-size: 20pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 7px 7px 7px 7px;
     
 }
 .dayForcast{
