@@ -87,3 +87,4 @@ function appendHistory (input) {
     pElement.textContent = input;
    history.appendChild(pElement);
 }
+//q: How can i make sure my local repo looks like my deployed repo?     
