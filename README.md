@@ -13,5 +13,5 @@ In the future, I would like to make the site more user friendly by adding more o
 I was not able to make the site load the weather data for the last city searched. I tried to use localStorage to store the data but I was not able to get it to work.
 
 ## Links
-Github Repo:
-Deployed Site:
+Github Repo: https://github.com/OliveraDiaz/WeatherApp.git
+Deployed Site: https://oliveradiaz.github.io/WeatherApp/
