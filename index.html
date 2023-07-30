@@ -12,44 +12,67 @@
  
 </head>
 <body>
+
     <header class="bg-gradient-to-r from-blue-900 via-blue- to-blue-100">
         <h1 class="text-white text-2xl font-bold text-center p-5">Weather Dashboard</h1>
     </header>
-    <aside class="flex ">
 
+    <aside class="test">
         <form id="form" method="GET">
             <label for ="city"></label>
             <input name="city" placeholder=" Enter a City" id="city" type="text reset" required class="border rounded m-5"/>
-           
             <button id="button" class= "bg-blue-900 fetchDataBtn p-2 rounded font-bold text-white button">Search</button>
         </form>
-        <div class="searchHistory"> </div>
     </aside>
-    <main class="main">
-        <div class="flex">
-            <div id="currentWeatherCityCard" class="flex flex-col border-gray-900 ml-96 main"></div>
-            <div id="currentWeatherDetailsEl" class="flex test main "></div>
-            <!-- <p id="UV"></p> -->
-    
 
+    <main class="main">
+     
+        <div class="current">
+            <p class="date text-black text-3xl m-2"></p>
+            <p class="city text-black text-3xl m-2"> </p>
+              <div class="flex">  
+                <p class="temp text-black text-2xl m-2"> </p>
+                <p class="wind text-black text-2xl m-2"></p>
+                <p class="humidity text-black text-2xl m-2"></p>
+            </div>
         </div>
 
-        <div id="dataContainer" class="flex">
-            <div class="text-3xl font-bold underline ml-96 mt-10"> 5-Day Forecast:</div>
-            <div>
-                <p class="city text-black text-3xl "> </p>
 
-            </div>
-        </div>  
 
-            <div class="flex">
-                <div class="cardForcast m-2" id="5 day "> </div>
-                <div class="cardForcast m-2" id="5 day "></div>
-                <div class="cardForcast m-2" id="5 day "></div>
-                <div class="cardForcast m-2" id="5 day "></div>
-                <div class="cardForcast m-2" id="5 day "></div>
+
+
+
+        <div >
+            <h2 class="text-3xl font-bold underline ml-96 mt-10"> 5-Day Forecast:</h2> 
+
+            <div class="dayForcast">
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="cardForcast  daily content-center" id="5 day "> </div>
+                </div> 
+                
+                
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="cardForcast1  daily content-center" id="5 day "> </div>
+                </div> 
+
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="cardForcast2  daily content-center" id="5 day "> </div>
+                </div> 
+                
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="cardForcast3  daily content-center" id="5 day "> </div>
+                </div> 
+
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <div class="cardForcast4  daily content-center" id="5 day "> </div>
+                </div> 
             </div>    
-       
+       </div>
     </main>
 
     <script src="script.js"></script>
